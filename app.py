@@ -11,7 +11,7 @@ def load_wiki_summary(query):
     return summary
 
 def load_qa_pipeline():
-    qa_pipeline = pipeline("question-answering", model = 'destilbet-bert-uncased-distilled-squad')
+    qa_pipeline = pipeline("question-answering", model = 'destilbert-bert-uncased-distilled-squad')
     return qa_pipeline
 
 def answer_question(pipeline, question, paragraph):
