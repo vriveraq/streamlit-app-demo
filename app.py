@@ -1,6 +1,7 @@
 from unittest import result
 import wikipedia
 import transformers
+import torch
 import streamlit as st
 from transformers import pipeline, Pipeline
 
@@ -24,6 +25,8 @@ def answer_question(pipeline, question, paragraph):
     return output
 
 def main():
+    st.title('Demo Wikipedia App')
+    st.write('Description')
 
     topic = st.text_input('SEARCH TOPIC', "")
     article_paragraph =  st.empty()
@@ -41,8 +44,7 @@ def main():
 
 
 
-    st.title('Demo Wikipedia App')
-    st.write('Description')
+    
 
 
 if __name__ == '__main__':
