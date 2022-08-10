@@ -1,4 +1,3 @@
-from unittest import result
 import wikipedia
 import transformers
 import torch
@@ -21,7 +20,6 @@ def answer_question(pipeline, question, paragraph):
     }
 
     output = pipeline(input)
-
     return output
 
 def main():
@@ -41,11 +39,6 @@ def main():
         result = answer_question(qa_pipeline, question, summary)
         answer = result["answer"]
         st.write(answer)
-
-
-
-    
-
 
 if __name__ == '__main__':
     main()
